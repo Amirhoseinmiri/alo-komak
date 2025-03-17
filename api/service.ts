@@ -40,7 +40,7 @@ export const getConfig = async () => {
 export const postFinal = async (data: FinalType) => {
   try {
     const response = await axiosInstans.post(
-      "api/experts/auth/register/register",
+      "api/experts/auth/register/complete-identity-information",
       data
     );
     return response.data;
