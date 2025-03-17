@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Vazirmatn } from "next/font/google";
 import "./globals.css";
-import { StepperProvider } from "../context/stepper-context";
+import Provider from "../providers";
 
 const vazir = Vazirmatn({
   weight: ["400", "500", "600", "700"],
@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="fa" dir="rtl">
       <body className={vazir.className}>
-        <StepperProvider>{children}</StepperProvider>
+        <Provider>{children}</Provider>
       </body>
     </html>
   );
